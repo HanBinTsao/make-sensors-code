@@ -7,7 +7,7 @@ def readDistanceCm():
 	triggerPin = 22	# <1>
 	echoPin = 27
 
-	v=(331.5+0.6*20) # m/s
+	v=(331.5+0.6*19) # m/s
 
 	gpio.mode(triggerPin, "out")
 
@@ -30,8 +30,9 @@ def readDistanceCm():
 def main():
 	d = readDistanceCm()	# <2>
 	print "Distance is %.2f cm" % d
-	time.sleep(0.5)
+	time.sleep(3)
 
 if __name__ == "__main__":
-	main()
+	while True: 
+            main()
 
